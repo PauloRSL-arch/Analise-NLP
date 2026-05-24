@@ -17,7 +17,7 @@
 <body>
 
 <h1>Relatório de Análise NLP (Recuperação da Informação)</h1>
-<p><strong>Repositório GitHub:</strong> <a href="https://github.com/usuario/prova_sri">https://github.com/usuario/prova_sri</a></p>
+<p><strong>Repositório GitHub:</strong> <a href="https://github.com/PauloRSL-arch/Analise-NLP">https://github.com/PauloRSL-arch/Analise-NLP</a></p>
 
 <h2>1. Descrição do Texto Utilizado</h2>
 <p>O corpus utilizado na análise consiste em um conjunto de 35 documentos variados, englobando notícias curtas sobre o Brasil, eventos históricos, informações geográficas (como a Floresta Amazônica e o Rio Amazonas) e personalidades importantes (Pelé, Machado de Assis, Santos Dumont). Os documentos variam entre 1 a 3 sentenças curtas e possuem tamanho compatível com o limite de 512 tokens. Os textos foram estruturados em formato <code>.csv</code> contendo as colunas <code>id</code> e <code>documento</code>.</p>
@@ -78,6 +78,78 @@
     <tr><td>ORG (Organizações)</td><td>19</td><td>ONU, Polícia Federal, Seleção Brasileira</td></tr>
     <tr><td>MISC (Diversos)</td><td>8</td><td>Copa do Mundo, Bossa Nova</td></tr>
 </table>
+
+<h3>Gráficos Gerados pela Análise de Dados</h3>
+<div style="text-align: center;">
+
+    <h4>Estatísticas palavras e tokens em janelas por documento</h4>
+    <img src="data/Analise de dados/Estatísticas palavras e tokens em janelas por documento.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Estatísticas palavras e tokens por janela</h4>
+    <img src="data/Analise de dados/Estatísticas palavras e tokens por janela.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Qtd de documentos por quantidade de entidades</h4>
+    <img src="data/Analise de dados/Qtd de documentos por quantidade de entidades.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Qtd de documentos por quantidade de locucoes verbais</h4>
+    <img src="data/Analise de dados/Qtd de documentos por quantidade de locucoes verbais.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Qtd de documentos por quantidade de palavras sem stopWords</h4>
+    <img src="data/Analise de dados/Qtd de documentos por quantidade de palavras sem stopWords.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Qtd de documentos por quantidade de palavras</h4>
+    <img src="data/Analise de dados/Qtd de documentos por quantidade de palavras.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Qtd de documentos por quantidade de sentença</h4>
+    <img src="data/Analise de dados/Qtd de documentos por quantidade de sentença.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Qtd de documentos por quantidade de substativos</h4>
+    <img src="data/Analise de dados/Qtd de documentos por quantidade de substativos.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Qtd de documentos por quantidade de tokens</h4>
+    <img src="data/Analise de dados/Qtd de documentos por quantidade de tokens.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Qtd de documentos por quantidade de vebos e aux</h4>
+    <img src="data/Analise de dados/Qtd de documentos por quantidade de vebos e aux.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Qtd de documentos por quantidade de verbos(aux) e substativos</h4>
+    <img src="data/Analise de dados/Qtd de documentos por quantidade de verbos(aux) e substativos.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Qtd de documents por quantidade de verbos</h4>
+    <img src="data/Analise de dados/Qtd de documents por quantidade de verbos.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Qtd de sentacas de docuemntos por quantidades de tokens</h4>
+    <img src="data/Analise de dados/Qtd de sentacas de docuemntos por quantidades de tokens.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Qtd de sentecas de documentos por quantidades de verbos aux e substantivos</h4>
+    <img src="data/Analise de dados/Qtd de sentecas de documentos por quantidades de verbos aux e substantivos.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Qtd de sentencas de documentos por quantidade de entidades</h4>
+    <img src="data/Analise de dados/Qtd de sentencas de documentos por quantidade de entidades.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Quantidade de sentencas de documentos por quantidade de locucoes verbais</h4>
+    <img src="data/Analise de dados/Quantidade de sentencas de documentos por quantidade de locucoes verbais.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Quantidade de sentencas de documentos por quantidade de verbos</h4>
+    <img src="data/Analise de dados/Quantidade de sentencas de documentos por quantidade de verbos.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Quantidade de sentencas de doumentos por quantidade de substativos</h4>
+    <img src="data/Analise de dados/Quantidade de sentencas de doumentos por quantidade de substativos.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Quantidade de setencas por documentos por quantidade de verbs e aux</h4>
+    <img src="data/Analise de dados/Quantidade de setencas por documentos por quantidade de verbs e aux.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Tamanho dos documentos tokenizados antes de classificas</h4>
+    <img src="data/Analise de dados/Tamanho dos documentos tokenizados antes de classificas.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Tamanho dos documentos tokenizados classificados</h4>
+    <img src="data/Analise de dados/Tamanho dos documentos tokenizados classificados.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Qtd de sentencas de documentos por quantidade de palavras</h4>
+    <img src="data/Analise de dados/qtd de sentencas de documentos por quantidade de palavras.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+</div>
+
 
 <p><em>Nota: Os arquivos completos (.csv) gerados em cada etapa (documentos_sentenciados, pos_tags, entidades) encontram-se preservados na pasta <code>data/</code> dentro do repositório da prova.</em></p>
 
