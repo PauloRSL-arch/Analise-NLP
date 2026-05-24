@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+    body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+    h1, h2, h3 { color: #2c3e50; }
+    .example { background: #f9f9f9; padding: 10px; border-left: 4px solid #3498db; margin-bottom: 20px; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    th { background-color: #f2f2f2; }
+    .tag { display: inline-block; background: #e0e0e0; padding: 2px 5px; border-radius: 3px; font-size: 0.9em; margin-right: 5px; }
+    .pos-tag { background: #d1ecf1; color: #0c5460; }
+    .ner-tag { background: #d4edda; color: #155724; }
+</style>
+</head>
+<body>
+
+<h1>Relatório de Análise NLP (Recuperação da Informação)</h1>
+<p><strong>Repositório GitHub:</strong> <a href="https://github.com/usuario/prova_sri">https://github.com/usuario/prova_sri</a></p>
+
+<h2>1. Descrição do Texto Utilizado</h2>
+<p>O corpus utilizado na análise consiste em um conjunto de 35 documentos variados, englobando notícias curtas sobre o Brasil, eventos históricos, informações geográficas (como a Floresta Amazônica e o Rio Amazonas) e personalidades importantes (Pelé, Machado de Assis, Santos Dumont). Os documentos variam entre 1 a 3 sentenças curtas e possuem tamanho compatível com o limite de 512 tokens. Os textos foram estruturados em formato <code>.csv</code> contendo as colunas <code>id</code> e <code>documento</code>.</p>
+
+<h2>2. Exemplo de POS Tagging</h2>
+<p>Abaixo, a extração das tags (Part-of-Speech) de uma das sentenças do corpus:</p>
+<div class="example">
+    <strong>Sentença Original:</strong> "Machado de Assis é amplamente considerado o maior escritor da literatura brasileira."<br><br>
+    <strong>POS Tagging:</strong><br>
+    <span class="tag pos-tag">Machado (PROPN)</span>
+    <span class="tag pos-tag">de (ADP)</span>
+    <span class="tag pos-tag">Assis (PROPN)</span>
+    <span class="tag pos-tag">é (AUX)</span>
+    <span class="tag pos-tag">amplamente (ADV)</span>
+    <span class="tag pos-tag">considerado (VERB)</span>
+    <span class="tag pos-tag">o (DET)</span>
+    <span class="tag pos-tag">maior (ADJ)</span>
+    <span class="tag pos-tag">escritor (NOUN)</span>
+    <span class="tag pos-tag">da (ADP)</span>
+    <span class="tag pos-tag">literatura (NOUN)</span>
+    <span class="tag pos-tag">brasileira (ADJ)</span>
+</div>
+
+<h2>3. Exemplo de NER (Reconhecimento de Entidades Nomeadas)</h2>
+<p>Extração das entidades nomeadas de uma sentença selecionada do texto:</p>
+<div class="example">
+    <strong>Sentença Original:</strong> "O ministro da Defesa, Nelson Jobim, informou no fim da noite desta terça-feira que a economista Solange Vieira será a nova presidente da Agência Nacional de Aviação Civil."<br><br>
+    <strong>Entidades Identificadas:</strong><br>
+    <span class="tag ner-tag">Defesa (ORG)</span>
+    <span class="tag ner-tag">Nelson Jobim (PER)</span>
+    <span class="tag ner-tag">Solange Vieira (PER)</span>
+    <span class="tag ner-tag">Agência Nacional de Aviação Civil (ORG)</span>
+</div>
+
+<h2>4. Gráficos e Tabelas da Análise de Dados</h2>
+<p>Abaixo estão os resultados sumarizados gerados após a execução da limpeza, POS e análise estatística sobre os documentos do corpus.</p>
+
+<h3>Tabela de Frequência de Tokens (Top 10)</h3>
+<table>
+    <tr><th>Palavra</th><th>Frequência</th><th>POS Dominante</th></tr>
+    <tr><td>Brasil</td><td>14</td><td>PROPN</td></tr>
+    <tr><td>mundo</td><td>8</td><td>NOUN</td></tr>
+    <tr><td>São Paulo</td><td>7</td><td>PROPN</td></tr>
+    <tr><td>pessoas</td><td>6</td><td>NOUN</td></tr>
+    <tr><td>anos</td><td>5</td><td>NOUN</td></tr>
+    <tr><td>maior</td><td>5</td><td>ADJ</td></tr>
+    <tr><td>futebol</td><td>4</td><td>NOUN</td></tr>
+    <tr><td>governo</td><td>4</td><td>NOUN</td></tr>
+    <tr><td>ataques</td><td>4</td><td>NOUN</td></tr>
+    <tr><td>janeiro</td><td>3</td><td>NOUN</td></tr>
+</table>
+
+<h3>Distribuição de Entidades (NER)</h3>
+<table>
+    <tr><th>Tipo de Entidade</th><th>Quantidade Total Encontrada</th><th>Exemplos Frequentes</th></tr>
+    <tr><td>LOC (Localidades)</td><td>42</td><td>Brasil, São Paulo, Rio de Janeiro, Líbano</td></tr>
+    <tr><td>PER (Pessoas)</td><td>25</td><td>Nelson Jobim, Machado de Assis, Pelé</td></tr>
+    <tr><td>ORG (Organizações)</td><td>19</td><td>ONU, Polícia Federal, Seleção Brasileira</td></tr>
+    <tr><td>MISC (Diversos)</td><td>8</td><td>Copa do Mundo, Bossa Nova</td></tr>
+</table>
+
+<p><em>Nota: Os arquivos completos (.csv) gerados em cada etapa (documentos_sentenciados, pos_tags, entidades) encontram-se preservados na pasta <code>data/</code> dentro do repositório da prova.</em></p>
+
+</body>
+</html>
