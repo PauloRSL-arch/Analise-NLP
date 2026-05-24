@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+    body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+    h1, h2, h3 { color: #2c3e50; }
+    .example { background: #f9f9f9; padding: 10px; border-left: 4px solid #3498db; margin-bottom: 20px; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    th { background-color: #f2f2f2; }
+    .tag { display: inline-block; background: #e0e0e0; padding: 2px 5px; border-radius: 3px; font-size: 0.9em; margin-right: 5px; }
+    .pos-tag { background: #d1ecf1; color: #0c5460; }
+    .ner-tag { background: #d4edda; color: #155724; }
+</style>
+</head>
+<body>
+
+<h1>Relatório de Análise NLP (Recuperação da Informação)</h1>
+<p><strong>Repositório GitHub:</strong> <a href="https://github.com/PauloRSL-arch/Analise-NLP">https://github.com/PauloRSL-arch/Analise-NLP</a></p>
+
+<h2>1. Descrição do Texto Utilizado</h2>
+<p>O corpus utilizado na análise consiste em um conjunto de 35 documentos 100% originais abordando o tema de Tecnologia e Inovação. Os textos englobam subtemas como Inteligência Artificial, computação quântica, exploração espacial e a atuação de gigantes do Vale do Silício (como Apple, Google e OpenAI). Os documentos variam entre 1 a 2 sentenças e possuem tamanho compatível com o limite de 512 tokens. Os textos foram estruturados em formato <code>.csv</code> contendo as colunas <code>id</code> e <code>documento</code>.</p>
+
+<h2>2. Exemplo de POS Tagging</h2>
+<p>Abaixo, a extração das tags (Part-of-Speech) de uma das sentenças do corpus:</p>
+<div class="example">
+    <strong>Sentença Original:</strong> "A empresa OpenAI foi fundada com o objetivo de desenvolver inteligência artificial."<br><br>
+    <strong>POS Tagging:</strong><br>
+    <span class="tag pos-tag">A (DET)</span>
+    <span class="tag pos-tag">empresa (NOUN)</span>
+    <span class="tag pos-tag">OpenAI (PROPN)</span>
+    <span class="tag pos-tag">foi (AUX)</span>
+    <span class="tag pos-tag">fundada (VERB)</span>
+    <span class="tag pos-tag">com (ADP)</span>
+    <span class="tag pos-tag">o (DET)</span>
+    <span class="tag pos-tag">objetivo (NOUN)</span>
+    <span class="tag pos-tag">de (SCONJ)</span>
+    <span class="tag pos-tag">desenvolver (VERB)</span>
+    <span class="tag pos-tag">inteligência (NOUN)</span>
+    <span class="tag pos-tag">artificial (ADJ)</span>
+</div>
+
+<h2>3. Exemplo de NER (Reconhecimento de Entidades Nomeadas)</h2>
+<p>Extração das entidades nomeadas de uma sentença selecionada do texto:</p>
+<div class="example">
+    <strong>Sentença Original:</strong> "Steve Jobs foi um dos principais fundadores da Apple e revolucionou a indústria com o lançamento do iPhone."<br><br>
+    <strong>Entidades Identificadas:</strong><br>
+    <span class="tag ner-tag">Steve Jobs (PER - Pessoa)</span>
+    <span class="tag ner-tag">Apple (ORG - Organização)</span>
+    <span class="tag ner-tag">iPhone (MISC - Produto/Diversos)</span>
+</div>
+
+<h2>4. Gráficos e Tabelas da Análise de Dados</h2>
+<p>Abaixo estão os resultados sumarizados gerados após a execução da limpeza, POS e análise estatística sobre os documentos do corpus.</p>
+
+<h3>Tabela de Frequência de Tokens (Top 10)</h3>
+<table>
+    <tr><th>Palavra</th><th>Frequência</th><th>POS Dominante</th></tr>
+    <tr><td>inteligência</td><td>9</td><td>NOUN</td></tr>
+    <tr><td>artificial</td><td>8</td><td>ADJ</td></tr>
+    <tr><td>dados</td><td>7</td><td>NOUN</td></tr>
+    <tr><td>empresas</td><td>6</td><td>NOUN</td></tr>
+    <tr><td>mundo</td><td>6</td><td>NOUN</td></tr>
+    <tr><td>desenvolvimento</td><td>5</td><td>NOUN</td></tr>
+    <tr><td>tecnologia</td><td>5</td><td>NOUN</td></tr>
+    <tr><td>sistema</td><td>4</td><td>NOUN</td></tr>
+    <tr><td>grande</td><td>4</td><td>ADJ</td></tr>
+    <tr><td>redes</td><td>3</td><td>NOUN</td></tr>
+</table>
+
+<h3>Distribuição de Entidades (NER)</h3>
+<table>
+    <tr><th>Tipo de Entidade</th><th>Quantidade Total Encontrada</th><th>Exemplos Frequentes</th></tr>
+    <tr><td>ORG (Organizações)</td><td>31</td><td>OpenAI, Apple, Google, NASA, SpaceX</td></tr>
+    <tr><td>PER (Pessoas)</td><td>12</td><td>Steve Jobs, Elon Musk</td></tr>
+    <tr><td>LOC (Localidades)</td><td>8</td><td>Vale do Silício, Califórnia</td></tr>
+    <tr><td>MISC (Diversos)</td><td>15</td><td>iPhone, Windows, Linux, Bitcoin, TikTok, Zoom</td></tr>
+</table>
+
+<h3>Gráficos Gerados pela Análise de Dados</h3>
+<div style="text-align: center;">
+
+    <h4>Estatisticas palavras e tokens por janela</h4>
+    <img src="data/Analise_de_dados/Estatisticas palavras e tokens por janela.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Estatisticas palbras e tokens em janelas por documento</h4>
+    <img src="data/Analise_de_dados/Estatisticas palbras e tokens em janelas por documento.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Qtd de Sentenças de documentos por quantiadde de entidades</h4>
+    <img src="data/Analise_de_dados/Qtd de Sentenças de documentos por quantiadde de entidades.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Qtd de documentos por quantidade de palabras</h4>
+    <img src="data/Analise_de_dados/Qtd de documentos por quantidade de palabras.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Qtd de documentos por quantidade de palavras sem stopword</h4>
+    <img src="data/Analise_de_dados/Qtd de documentos por quantidade de palavras sem stopword.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Qtd de documentos por quantidade de sentencas</h4>
+    <img src="data/Analise_de_dados/Qtd de documentos por quantidade de sentencas.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Qtd de documentos por quantidade de tokens</h4>
+    <img src="data/Analise_de_dados/Qtd de documentos por quantidade de tokens.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Qtd de documentos por quantidade de verbos e aux</h4>
+    <img src="data/Analise_de_dados/Qtd de documentos por quantidade de verbos e aux.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Qtd de documentos por quantidade de verbos</h4>
+    <img src="data/Analise_de_dados/Qtd de documentos por quantidade de verbos.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Qtd de documentos por quantidde de locucoes verbais</h4>
+    <img src="data/Analise_de_dados/Qtd de documentos por quantidde de locucoes verbais.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Qtd de sentancas de documentos por quantidade de palavras desconsiderando stopWord</h4>
+    <img src="data/Analise_de_dados/Qtd de sentancas de documentos por quantidade de palavras desconsiderando stopWord.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Qtd de sentecas de documentos por quantidade de substantivos</h4>
+    <img src="data/Analise_de_dados/Qtd de sentecas de documentos por quantidade de substantivos.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Qtd de sentencas de documentos por quantidade de locucoes verbias</h4>
+    <img src="data/Analise_de_dados/Qtd de sentencas de documentos por quantidade de locucoes verbias.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Qtd de sentencas de documentos por quantidade de palavras</h4>
+    <img src="data/Analise_de_dados/Qtd de sentencas de documentos por quantidade de palavras.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Qtd de sentencas de documentos por quantidade de toknes</h4>
+    <img src="data/Analise_de_dados/Qtd de sentencas de documentos por quantidade de toknes.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Qtd de sentencas de documentos por quantidade de verbos</h4>
+    <img src="data/Analise_de_dados/Qtd de sentencas de documentos por quantidade de verbos.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Qtd de sentencas de documentos por quantidades de verbos aux e substantivos</h4>
+    <img src="data/Analise_de_dados/Qtd de sentencas de documentos por quantidades de verbos aux e substantivos.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Qtd de sentencas por quantidade de verbos e aux</h4>
+    <img src="data/Analise_de_dados/Qtd de sentencas por quantidade de verbos e aux.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Quantidade de documentos por quantidade de entidades</h4>
+    <img src="data/Analise_de_dados/Quantidade de documentos por quantidade de entidades.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Quantidade de documentos por quantidade de verbos aux e substantivos</h4>
+    <img src="data/Analise_de_dados/Quantidade de documentos por quantidade de verbos aux e substantivos.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Quantidade de documentos por quntidade de substantivos</h4>
+    <img src="data/Analise_de_dados/Quantidade de documentos por quntidade de substantivos.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Tamanhos dos documentos tokenizados antes de classificas</h4>
+    <img src="data/Analise_de_dados/Tamanhos dos documentos tokenizados antes de classificas.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+    <h4>Tamanhos dos documentos tokenizados classificados</h4>
+    <img src="data/Analise_de_dados/Tamanhos dos documentos tokenizados classificados.png" style="max-width: 80%; height: auto; margin-bottom: 20px;" />
+
+</div>
+
+<p><em>Nota: Os arquivos completos (.csv) gerados em cada etapa (documentos_sentenciados, pos_tags, entidades) encontram-se preservados na pasta <code>data/</code> dentro do repositório da prova.</em></p>
+
+</body>
+</html>
